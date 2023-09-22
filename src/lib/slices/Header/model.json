@@ -13,12 +13,12 @@
       "imageUrl": "",
       "primary": {},
       "items": {
-        "logo": {
-          "type": "Image",
+        "homebtn": {
+          "type": "Link",
           "config": {
-            "label": "logo",
-            "constraint": {},
-            "thumbnails": []
+            "label": "homeBtn",
+            "placeholder": "",
+            "select": null
           }
         },
         "overons": {

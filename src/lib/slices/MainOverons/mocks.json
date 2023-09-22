@@ -8,39 +8,60 @@
 				"value": "stop",
 				"type": "Text"
 			},
-			"informatie": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Id dolore amet occaecat consectetur ut ipsum sunt velit sunt amet magna dolore magna veniam. Non cupidatat sint commodo proident consequat deserunt ullamco nostrud sint labore est. Pariatur consequat labore tempor ut sit commodo fugiat quis laborum ut."
-						}
-					}
-				]
-			},
-			"contentimg": {
-				"__TYPE__": "ImageContent",
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-					"width": 3199,
-					"height": 3199
-				},
-				"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-				"width": 3199,
-				"height": 3199,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"thumbnails": {}
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "coal",
+				"type": "Text"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"membername",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "careful",
+							"type": "Text"
+						}
+					],
+					[
+						"memberimg",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+								"width": 12288,
+								"height": 16384
+							},
+							"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+							"width": 12288,
+							"height": 16384,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"githublink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					]
+				]
+			}
+		]
 	}
 ]

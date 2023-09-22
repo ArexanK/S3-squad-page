@@ -70,7 +70,10 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type OveronsDocumentDataSlicesSlice = MainOveronsSlice;
+type OveronsDocumentDataSlicesSlice =
+  | HeaderSlice
+  | FooterSlice
+  | MainOveronsSlice;
 
 /**
  * Content for overons documents
@@ -210,6 +213,17 @@ type SquadoverviewDocumentDataSlicesSlice =
  * Content for squadoverview documents
  */
 interface SquadoverviewDocumentData {
+  /**
+   * backgroundImg field in *squadoverview*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadoverview.backgroundimg
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundimg: prismic.ImageField<never>;
+
   /**
    * Slice Zone field in *squadoverview*
    *
@@ -393,14 +407,14 @@ export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
  */
 export interface HeaderSliceDefaultItem {
   /**
-   * logo field in *Header → Items*
+   * homeBtn field in *Header → Items*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].logo
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **API ID Path**: header.items[].homebtn
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  logo: prismic.ImageField<never>;
+  homebtn: prismic.LinkField;
 
   /**
    * overOns field in *Header → Items*
@@ -517,24 +531,49 @@ export interface MainOveronsSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * informatie field in *MainOverons → Primary*
+   * subtitle field in *MainOverons → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: main_overons.primary.informatie
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: main_overons.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  informatie: prismic.RichTextField;
+  subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *MainOverons → Items*
+ */
+export interface MainOveronsSliceDefaultItem {
+  /**
+   * memberName field in *MainOverons → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_overons.items[].membername
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  membername: prismic.KeyTextField;
 
   /**
-   * contentImg field in *MainOverons → Primary*
+   * memberImg field in *MainOverons → Items*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: main_overons.primary.contentimg
+   * - **API ID Path**: main_overons.items[].memberimg
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  contentimg: prismic.ImageField<never>;
+  memberimg: prismic.ImageField<never>;
+
+  /**
+   * githubLink field in *MainOverons → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_overons.items[].githublink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  githublink: prismic.LinkField;
 }
 
 /**
@@ -547,7 +586,7 @@ export interface MainOveronsSliceDefaultPrimary {
 export type MainOveronsSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<MainOveronsSliceDefaultPrimary>,
-  never
+  Simplify<MainOveronsSliceDefaultItem>
 >;
 
 /**
@@ -766,6 +805,7 @@ declare module "@prismicio/client" {
       MainSliceDefault,
       MainOveronsSlice,
       MainOveronsSliceDefaultPrimary,
+      MainOveronsSliceDefaultItem,
       MainOveronsSliceVariation,
       MainOveronsSliceDefault,
       SquadMembersSlice,

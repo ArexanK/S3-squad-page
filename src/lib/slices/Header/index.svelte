@@ -6,7 +6,7 @@
 
 
 <header>
-  <h1 class="fdnd">fdnd</h1>
+  <h1 class="fdnd"><a href="/">fdnd</a></h1>
   <a href={slice.items[0].overons.url}>Over ons</a>
 </header>
 
@@ -28,7 +28,7 @@
     padding: 20px;
   }
 
-  .fdnd {
+  .fdnd a {
     font-size: 1.2rem;
     border: 1px solid var(--white);
     border-radius: var(--rounded);
@@ -37,6 +37,10 @@
     text-transform: lowercase;
     padding: 0.5rem 1.2rem;
     display: block;
+  }
+
+  .fdnd a:hover {
+    text-decoration: none;
   }
 
   a {

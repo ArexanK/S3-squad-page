@@ -19,25 +19,39 @@
             "placeholder": ""
           }
         },
-        "informatie": {
-          "type": "StructuredText",
+        "subtitle": {
+          "type": "Text",
           "config": {
-            "label": "informatie",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "contentimg": {
-          "type": "Image",
-          "config": {
-            "label": "contentImg",
-            "constraint": {},
-            "thumbnails": []
+            "label": "subtitle",
+            "placeholder": ""
           }
         }
       },
-      "items": {}
+      "items": {
+        "membername": {
+          "type": "Text",
+          "config": {
+            "label": "memberName",
+            "placeholder": ""
+          }
+        },
+        "memberimg": {
+          "type": "Image",
+          "config": {
+            "label": "memberImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "githublink": {
+          "type": "Link",
+          "config": {
+            "label": "githubLink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
     }
   ]
 }

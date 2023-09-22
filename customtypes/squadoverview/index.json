@@ -13,6 +13,14 @@
         },
         "type": "UID"
       },
+      "backgroundimg": {
+        "type": "Image",
+        "config": {
+          "label": "backgroundImg",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

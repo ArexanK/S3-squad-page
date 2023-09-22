@@ -28,11 +28,15 @@
   </div>
 
   <div class="h2-center">
-    <h2>Tribe :</h2>
+    <h2>Tribe</h2>
   </div>
   
 
-  <div class="big-triangle"></div>
+  <div class="big-triangle">
+    <svg height="100" width="400">
+      <polygon points="200,1 350,100 50,100" style="fill: #D399BC; stroke: none; stroke-width:1"></polygon>
+    </svg>
+  </div>
   
   <div class="scribble">  
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 10">
@@ -47,7 +51,7 @@
   </div> 
 
   <div class="button">
-    <a href="/">Bezoek de squads</a>
+    <a href="squadselect">Bezoek de squads</a>
   </div>
 
 </section>
@@ -69,7 +73,6 @@
   margin-top: 100px;
   width: 100%;
   height: 100%;
-  margin-left: 10px;
 }
 
 .fdnd-squadpage h1 {
@@ -84,15 +87,15 @@
   margin-left: 18px;
   position: absolute;
   z-index: 100;
-  font-size: 50px;
+  font-size: 45px;
   text-shadow: 5px 1px var(--hot-pink);
-  max-width: 370px;
+  max-width: 320px;
 }
 
 .plate {
   background-color: var(--deep-blue);
   margin: auto;
-  width: 95%;
+  width: 85%;
   height: 110px;
   transform: skew(-15deg) rotateX(15deg) rotateY(-175deg);
   position: relative;
@@ -102,7 +105,7 @@
 .front-plate {
   background-color: var(--yellow);
   margin: -50px auto;
-  width: 95%;
+  width: 85%;
   height: 110px;
   transform: skew(-15deg) rotateX(15deg) rotateY(-173deg);
   position: relative;
@@ -139,8 +142,9 @@
 
 a {
   background-color: var(--deep-blue);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 6px;
+  padding: 20px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
 }
@@ -149,7 +153,7 @@ a {
 
 .sparkles-top {
   position: absolute;
-  right: 0;
+  right: 40px;
   rotate: -47deg;
   z-index: 30;
 }
@@ -196,7 +200,6 @@ a {
 }
 
 .scribble {
-  margin-top: 120px;
   position: relative;
   z-index: 10;
   width: 100px;
@@ -230,9 +233,10 @@ and (min-width : 750px) {
   }
 
   .big-triangle {
-    margin: -80px auto;
+    margin: 10px auto;
     border-width: 0 397px 286px 347px;
-    transform: rotate(17deg);
+    transform: rotate(7deg);
+    width: 310px;
 }
 
   .sparkles-top {

@@ -12,10 +12,10 @@
   data-slice-variation={slice.variation}
 >
   
-  <section>
+  <footer>
     <img class="hva-logo" src="{slice.items[0].hvalogo.url}" alt="hva logo"/>
     <span> © 2023 FDND Squadpage </span>
-  </section>
+  </footer>
 
 </section>
 
@@ -26,12 +26,12 @@
     --turquoise: #55B6AE;
   }
 
-  section{
+  footer{
     background-color: var(--turquoise);
     width: 100%;
     height: auto;
     margin-top: 2em;
-    position: absolute;
+    position: sticky;
     bottom: 0;
 
     display: flex;
@@ -60,7 +60,7 @@
 
   @media (min-width: 800px) {
 
-    section{
+    footer{
       flex-direction: row;
       justify-content: space-between;
     }
