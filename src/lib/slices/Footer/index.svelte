@@ -31,7 +31,7 @@
     width: 100%;
     height: auto;
     margin-top: 2em;
-    position: absolute;
+    position: sticky;
     bottom: 0;
 
     display: flex;

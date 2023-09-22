@@ -37,19 +37,18 @@
 
   <div class="button-wrapper">
     <section class="button-a">
-      <a href={slice.primary.squada.url}>
+      <a href=/squad-leden/squadA>
         <span class="first-word">Squad</span>
         <span class="second-word">A</span></a
       >
     </section>
     <section class="button-b">
-      <a href={slice.primary.squadb.url}
+      <a href=/squad-leden/squadB
         ><span class="first-word">Squad</span>
         <span class="second-word">B</span></a
       >
     </section>
   </div>
-
 
 <style>
   * {
