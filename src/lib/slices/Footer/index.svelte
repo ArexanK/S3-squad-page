@@ -30,8 +30,8 @@
     background-color: var(--turquoise);
     width: 100%;
     height: auto;
-    margin-top: 2em;
-    position: sticky;
+    margin-top: auto;
+    position: block;
     bottom: 0;
 
     display: flex;
